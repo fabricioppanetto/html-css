@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body{
+    background-color: black;
+}
+
+div{
+    display:inline-block;
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-color: lightgray;
+    transition: 2s linear;
+}
+
+div#d1:hover{
+    background-color: red;
+}
+
+div#d2:hover{
+    background-color: yellow;
+}
+
+div#d3:hover{
+    background-color: blue;
+}
+
+div#d4:hover{
+    background-color: green;
+}
