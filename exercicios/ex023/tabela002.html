@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabela02</title>
     <style>
         *{
             margin: 0;
             padding: 0;
         }
 
+        h1{
+            margin: auto;
+            width: 500px;
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         table{
-            width: 400px;
+            width: 500px;
             border-collapse: collapse;
         }
 
@@ -26,15 +38,28 @@
         }
 
         thead, tfoot{
-            background-color: gray;
+            background-color: rgb(87, 87, 87);
+            color: white;
+        }
+
+        tbody > tr:nth-child(2n-1){
+            background-color: violet;
+            color: blue;
+        }
+
+        tbody > tr:nth-child(2n){    /* odd = 2n-1  */
+            background-color: blue;
+            color: violet;
         }
     </style>
 </head>
 <body>
+
     <h1>Uso de tabelas grandes</h1>
     <!--
         Anatomia para tabelas grandes
             Table 
+                CAPTION
                 THEAD
                     TR, TD, TH
                 TBODY
@@ -42,13 +67,17 @@
                 TFOOT
                     TR, TD, TH
     -->
+
     <table>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
+        <caption>
+            População das unidades Federativas
+        </caption>
         <tbody>
             <tr>
                 <td>São Paulo</td>
@@ -62,14 +91,54 @@
                 <td>Rio de Janeiro</td>
                 <td class="num">15 989 929</td>
             </tr>
-
+            <tr>
+                <td>Bahia </td>
+                <td class="num">14 016 906</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">10 444 526</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 693 929</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8 452 381</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">7 581 051</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">8 796 448</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">6 248 436</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">6 003 788</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6 574 789</td>
+            </tr>
+            <tr>
+                <td>Espirito Santo</td>
+                <td class="num">3 514 952</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>População total</th>
-                <td><strong>000</strong></td>
+                <th scope="row">População total</th>
+                <td class="num"><strong>000</strong></td>
             </tr>
         </tfoot>
     </table>
+    
 </body>
 </html>
