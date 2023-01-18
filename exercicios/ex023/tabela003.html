@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclagem de celulas </title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            
+            width: 300px;
+            height: 300px;
+        }
+
+        td{
+            
+            padding: 10px ;
+            text-align: center;
+        }
+
+        .num01, .num03, .num04, .num09{
+            background-color: blueviolet;
+            border-radius: 100px;
+        }
+
+        .num05{
+            background-color: blue;
+            border-radius: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Mesclagem de células</h1>
+    <table>
+        <tr>
+            <td class="num01" colspan="2"></td>
+            <!--  <td>2</td>  -->
+            <td class="num03" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td class="num04" rowspan="2"></td>
+            <td class="num05"></td>
+            <!--  <td>6</td>  -->
+        </tr>
+        <tr>
+            <!--  <td>7</td>  -->
+            <!--  <td>8</td>  -->
+            <td class="num09" colspan="2"></td>
+        </tr>
+    </table>
+</body>
+</html>
